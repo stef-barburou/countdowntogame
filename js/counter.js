@@ -21,16 +21,13 @@ $( document ).ready(function() {
         let x = setInterval(function() {
             let now = new Date();
             diffTime = target.getTime() - now.getTime();
-            
+            //separate time into chunks
             let hours = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             let minutes = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));
             let seconds = Math.floor((diffTime % (1000 * 60)) / 1000);
+            //post content using jquery. was lazy
             $("#content_target").html(hours+" heures "+minutes+" minutes et "+seconds+" secondes"); 
 
         }, 10);
     }
 });
-
-function displayTime(){
-
-}
